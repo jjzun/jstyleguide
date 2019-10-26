@@ -1,8 +1,40 @@
 //CUSTOM GLYPHICONS
+// @font-face {
+//   font-family: 'fontcustom-icons';
+//   src: url('/assets/fonts/fontcustom-icons.eot') format('embedded-opentype'),
+//     url('/assets/fonts/fontcustom-icons.woff') format('woff'),
+//     url('/assets/fonts/fontcustom-icons.ttf') format('truetype'),
+//     url('/assets/fonts/fontcustom-icons.svg') format('svg');
+// }
+
 @font-face {
-  font-family: 'fontcustom-icons';
-  src: url('/assets/fonts/fontcustom-icons.eot') format('embedded-opentype'),
-    url('/assets/fonts/fontcustom-icons.woff') format('woff'),
-    url('/assets/fonts/fontcustom-icons.ttf') format('truetype'),
-    url('/assets/fonts/fontcustom-icons.svg') format('svg');
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  src: url('/assets/fonts/SourceSansPro-Light.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/assets/fonts/SourceSansPro-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-style: italic;
+  src: url('/assets/fonts/SourceSansPro-Italic.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  src: url('/assets/fonts/SourceSansPro-SemiBold.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: bold;
+  src: url('/assets/fonts/SourceSansPro-Bold.ttf') format('truetype'),
 }
