@@ -1,0 +1,61 @@
+@import 'mixin.breakpoints';
+
+//GRID CONFIGURATION
+.shell {
+  display: grid;
+  grid-template-columns: $desktop-padding auto $desktop-padding;
+  grid-template-rows: auto;
+  min-height: 83%;
+
+  @include large-phone {
+    grid-template-columns: $mobile-padding auto $mobile-padding;
+  }
+
+  .page {
+    grid-column: 2 / 3;
+    padding: 40px 0;
+
+    @include up-to-tablet {
+      grid-column: 1 / 4;
+    }
+
+    section {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(1, auto);
+      padding: 15px 8px;
+
+      .col {
+        &--one {
+          display: grid;
+          grid-template-columns: repeat(1, auto);
+          grid-template-rows: auto;
+        }
+
+        &--two {
+          display: grid;
+          grid-template-columns: repeat(2, auto);
+          grid-template-rows: auto;
+        }
+
+        &--three {
+          display: grid;
+          grid-template-columns: repeat(3, auto);
+          grid-template-rows: auto;
+        }
+
+        &--four {
+          display: grid;
+          grid-template-columns: repeat(4, auto);
+          grid-template-rows: auto;
+        }
+      }
+
+      .inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

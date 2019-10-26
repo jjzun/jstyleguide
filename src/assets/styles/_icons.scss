@@ -1,0 +1,41 @@
+//SP-Icons Classes
+[class^='icon-'],
+[class*=' icon-'] {
+
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'fontcustom-icons' !important; /* stylelint-disable-line declaration-no-important */
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  margin-right: 5px;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bars:before {
+  content: '\f101';
+}
+
+.icon-calendar-alt:before {
+  content: '\f102';
+}
+
+.icon-caret-down:before {
+  content: '\f103';
+}
+
+.icon-filter:before {
+  content: '\f104';
+}
+
+.icon-search:before {
+  content: '\f105';
+}
+
+.icon-share-square:before {
+  content: '\f106';
+}

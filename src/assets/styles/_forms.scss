@@ -1,0 +1,113 @@
+//INPUT AND SELECT GLOBAL STYLES
+
+
+form {
+  //padding-left: 46px;
+
+  .label {
+    margin-bottom: 6px;
+  }
+}
+
+input {
+  display: flex;
+  background-color: $white;
+  height: 39px;
+  margin: 6px 0 18px;
+  padding-left: 14px;
+  max-width: 100%;
+  min-width: 200px;
+  box-shadow: none;
+  box-sizing: content-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 14px;
+  border: 1px solid $input-border-gray;
+  border-radius: 5px;
+}
+
+//TODO: include arrow animation
+select {
+
+  @extend input;
+  background-image: linear-gradient(45deg, transparent 50%, $main-blue 50%),
+    linear-gradient(135deg, $main-blue 50%, transparent 50%),
+    linear-gradient(to right, $input-border-gray, $input-border-gray);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+
+  &:focus {
+    background-image: linear-gradient(45deg, $main-blue 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, $main-blue 50%),
+      linear-gradient(to right, $input-border-gray, $input-border-gray);
+    background-position: calc(100% - 15px) 1em,
+      calc(100% - 20px) 1em,
+      calc(100% - 2.5em) 0.5em;
+    background-size: 5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+    border-color: $main-blue;
+    outline: 0;
+  }
+}
+
+
+//RADIO BUTTON CHECKBOX
+
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &.checked {
+    font-weight: 700;
+  }
+
+  &:hover input ~ .checkmark {
+    background-color: $input-border-gray;
+  }
+
+  &:hover input[disabled] ~ .checkmark {
+    background-color: none;
+  }
+
+  input:checked ~ .checkmark {
+    background-color: $main-blue;
+
+    &:after {
+      display: block;
+    }
+  }
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 11px;
+  width: 11px;
+  background-color: $white;
+  border: 2px solid $radio-button-outline;
+  border-radius: 50%;
+
+  &.square {
+    border-radius: 0;
+  }
+}

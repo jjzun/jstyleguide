@@ -1,0 +1,19 @@
+body,
+p,
+span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: $main-gray;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+}

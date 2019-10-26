@@ -1,0 +1,82 @@
+button {
+  background: none;
+  border: none;
+}
+
+button.btn {
+  display: inline-flex;
+  margin: 44px 0;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 18px 37px;
+  line-height: 20px;
+  color: $white;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 2px solid $main-blue;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+
+  &--primary {
+    background-color: $main-blue;
+    min-width: 210px;
+
+    &:hover {
+      background-color: $main-blue--hover;
+    }
+
+    &:active {
+      border-color: $main-blue--active;
+    }
+  }
+
+  &--secondary {
+    background-color: $white;
+    color: $main-blue;
+    min-width: 210px;
+
+    &:active {
+      border-color: $main-blue--active;
+    }
+
+    &:hover {
+      background: $white--hover;
+    }
+
+  }
+
+  &--small {
+    background-color: $main-blue;
+    font-size: 14px;
+    min-width: 182px;
+    padding: 10px 17px;
+    line-height: 20px;
+
+    &:hover {
+      background-color: $main-blue--hover;
+    }
+
+    &:active {
+      border-color: $main-blue--active;
+    }
+  }
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $filter-btn-gray;
+  border-radius: 5px;
+  width: 66px;
+  height: 40px;
+  margin-right: 10px;
+
+  span {
+    color: $white;
+    font-size: 22px;
+  }
+}

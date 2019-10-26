@@ -1,0 +1,131 @@
+@import 'mixin.breakpoints';
+
+// TOP NAVIGATION TABS
+
+.high-tab {
+  display: inline-flex;
+  font-size: 20px;
+  font-weight: 700;
+  align-items: center;
+  padding: 25px;
+  border-bottom: 1px solid $main-blue;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+  margin-top: 30px;
+
+  .icon {
+    //TODO: replace with proper icons when available
+    width: 30px;
+    height: 30px;
+
+    &:before {
+      content: '';
+      display: inline-grid;
+      align-items: center;
+      width: 15px;
+      height: 15px;
+      -moz-border-radius: 7.5px;
+      -webkit-border-radius: 7.5px;
+      border-radius: 7.5px;
+      background-color: $white;
+    }
+  }
+
+  &.active {
+    background: $main-blue;
+    color: $white;
+  }
+
+  &.inactive {
+    background: none;
+    color: $main-blue;
+  }
+}
+
+//INFO TAB CARD
+
+.info-card {
+  -webkit-box-shadow: 2px 3px 13px -2px rgba(158, 158, 158, 1);
+  -moz-box-shadow: 2px 3px 13px -2px rgba(158, 158, 158, 1);
+  box-shadow: 2px 3px 13px -2px rgba(158, 158, 158, 1);
+  padding: 7px 25px;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+
+  @include xlarge-desktop {
+    max-width: 38em;
+  }
+
+  &__column {
+    border-right: 1px solid $border-gray;
+    padding: 14px 22px;
+    display: grid;
+  }
+
+  &__title {
+    border-bottom: 1px solid $border-gray;
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-left: 10px;
+      color: $main-gray;
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 16px 0 4px;
+      display: inline-block;
+    }
+  }
+
+  &__list-items {
+    list-style: none;
+    margin-top: 15px;
+
+    li {
+      margin: 19px 0;
+
+      a {
+        color: $main-blue;
+
+        &:hover {
+          color: $main-blue--hover;
+        }
+      }
+    }
+  }
+}
+
+//NAVIGATION TABS
+
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ul {
+    border: 1px solid $border-gray;
+    border-radius: 5px;
+    background: $tabs-fill;
+    list-style: none;
+    padding: 11px 0;
+
+    li {
+      a {
+        padding: 11px 25px;
+        border-right: 1px solid $border-gray;
+        cursor: pointer;
+        font-size: 14px;
+
+        &.active {
+          background: $main-blue;
+          color: $white;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

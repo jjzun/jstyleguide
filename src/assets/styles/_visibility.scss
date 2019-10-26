@@ -1,0 +1,13 @@
+@import 'mixin.breakpoints';
+
+.hide-for-medium {
+  @include small-desktop {
+    display: none !important;
+  }
+}
+
+.hide-for-small {
+  @include large-phone {
+    display: none !important;
+  }
+}
