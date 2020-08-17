@@ -1,13 +1,18 @@
-.flex-container {
+.global-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-app-navigation {
-    width: 30%
+app-topbar {
+    width: 100%;
 }
 
-app-page-content {
-    width: 70%;
+.page-navigation-menu {
+    width: 250px;
+
+    +.page-navigation-container {
+        padding-left: 270px;
+    }
 }
+
