@@ -1,0 +1,13 @@
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+app-navigation {
+    width: 30%
+}
+
+app-page-content {
+    width: 70%;
+}

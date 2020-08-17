@@ -1,0 +1,12 @@
+@import '../../../assets/styles/_variables.scss';
+
+.fixed-navigation {
+    background-color: $main-blue;
+    position: fixed;
+    height: 100%;
+    width: 25%;
+
+    li {
+        color: $white;
+    }
+}
